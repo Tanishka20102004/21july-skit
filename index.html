@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+       <link rel="stylesheet" href="css/style2.css"/>
+       <link rel="stylesheet" href="style.css"/>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+           
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    position: sticky;
+}
+.icon{
+    margin-left: 40px ;
+    margin-right: 40px;
+    padding-right:10px ;
+    
+   
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color:green;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+   
+    margin-left:0% ;
+    margin-right: 0%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+.text-overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color:#ffffff;
+    
+}
+
+.text-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: green;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(49, 171, 38);
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    background-color: #fff;
+    margin-bottom: 8%;
+}
+
+.feature {
+    text-align: center;
+    max-width: 20%;
+    border: 1px solid gray;
+    padding: 1em;
+}
+
+.feature i {
+    font-size: 2em;
+    color: green;
+    margin-bottom: 0.5em;
+}
+
+.feature h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.feature p {
+    font-size: 0.9em;
+    color: #666;
+}
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+.product{
+    position: absolute;
+    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.product p{
+    font-size: 15px;
+    font-weight: none;
+    color: #666;
+}
+
+.new-products {
+    text-align: center;
+    margin: 50px 0;
+    margin-top: 18%;
+}
+
+.new-products h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.new-products p {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product2 {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    cursor: pointer;
+
+}
+
+.product2 img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 1s;
+}
+.product2 .img{
+  overflow: hidden;
+}
+.product2 img:hover {
+            transform: scale(1.1); 
+        }
+.product2:hover .product-actions{
+  transform: translateY(-200px);
+  
+}
+
+.product-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+
+}
+
+.product-info .price {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-info .price span {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+.product-actions button {
+    background-color: green;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: justify;
+    
+    overflow:hidden;
+}
+
+.product-actions button:hover {
+    background-color: darkgreen;
+    
+}
+.banner {
+      position: relative;
+      background-image: url('https://fastarz.com/wp-content/uploads/2023/12/1692701055_drikus-club-p-stilnii-shopper-oboi-instagram-48-min.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .banner h1 {
+      font-size: 50px;
+      color: black;
+    }
+    .banner p {
+      font-size: 30px;
+      margin: 10px 0;
+      color: black;
+      font-weight: bold;
+
+    }
+    .banner .btn {
+      margin-top: 20px;
+      margin: 10%;
+    }
+    .productss{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10%;
+    }
+    .productss p{
+    font-size: 15px;
+    font-weight: none;
+    color: #666;
+}
+.product-card {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .product-card img {
+      width: 80%;
+      height: auto;
+      margin-left: 50%;
+      margin-top: 60%;
+    }
+    .product-card1 img {
+      width: 100%;
+      height: 100%;
+      margin-top: 60%;
+    }
+    .product-card .price {
+      font-size: 24px;
+      margin: 15px 0;
+      margin-left: 70%;
+    }
+    .product-card1 .btn {
+      margin-top: 20px;
+      margin: 10%;
+     }
+     .product-card1 .btn:hover { 
+      background-color: #28a745; 
+      border-color: #28a745; 
+    }
+.product-card1 h4{
+      margin-right: 70%;
+      margin:10%
+  
+    }
+    .product-card .old-price {
+      text-decoration: line-through;
+      color: #999;
+      margin-left: 10px;
+    }
+    .product-card h4{
+      margin-left: 70%;
+    
+    }
+    .product-card2 img {
+      width: 80%;
+      height: auto;
+      margin-left: 160%;
+      margin-top: 10%;
+    }
+    .product-card2 h4{
+      margin-left: 180%;
+    }
+    .product-card2 .price {
+      font-size: 24px;
+      margin: 15px 0;
+      margin-left: 180%;
+    }
+    .main-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    flex: 1 1 calc(25% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    margin-top:6%;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 1em;
+    color: #333;
+}
+
+.item p span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.btn-success {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+.product-info2 h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+
+}
+
+.product-info2 .price {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+.product-info2 :hover {
+            color: rgb(53, 217, 53); 
+        }
+  .product-info2 .btn{
+         margin: 10px;
+          border: none;
+          text-decoration: none;
+        }
+        .product-info2 .btn:hover {
+            color: rgb(53, 217, 53); 
+        }
+
+
+        .footer-area {
+    background: #0d0d1f
+}
+
+@media (max-width: 991px) {
+    .footer-area .single-footer-widget {
+        margin-bottom:30px
+    }
+}
+
+.footer-area .single-footer-widget h4 {
+    color: #ffffff;
+    margin-bottom: 35px
+}
+
+@media (max-width: 1024px) {
+    .footer-area .single-footer-widget h4 {
+        font-size:18px
+    }
+}
+
+@media (max-width: 991px) {
+    .footer-area .single-footer-widget h4 {
+        margin-bottom:15px
+    }
+}
+
+.footer-area .single-footer-widget ul {
+    padding-left: 0px
+}
+
+.footer-area .single-footer-widget ul li {
+    margin-bottom: 15px;
+    list-style: none
+}
+
+.footer-area .single-footer-widget ul li a {
+    transition: all 300ms linear 0s;
+    color: #797979
+}
+
+.footer-area .single-footer-widget ul li a:hover {
+    color: #ffffff
+}
+
+.footer-area .single-footer-widget .form-wrap {
+    margin-top: 25px
+}
+
+.footer-area .single-footer-widget input {
+    height: 50px;
+    border: none;
+    width: 70% !important;
+    font-weight: 300;
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
+    padding-left: 20px;
+    border-radius: 0;
+    font-size: 14px;
+    padding: 10px
+}
+
+.footer-area .single-footer-widget input:focus {
+    outline: none
+}
+
+.footer-area .single-footer-widget .click-btn {
+    font-size: 12px;
+    text-transform: uppercase;
+    background: #71cd14;
+    color: #ffffff;
+    border-radius: 0;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 8px 12px;
+    border: 0;
+    position: relative;
+    left: -12%;
+    transition: all 300ms linear 0s
+}
+
+.footer-area .single-footer-widget .click-btn:hover {
+    opacity: .8
+}
+
+.footer-area .footer-bottom {
+    margin-top: 50px
+}
+
+@media (max-width: 991px) {
+    .footer-area .footer-bottom {
+        margin-top:20px
+    }
+}
+
+.footer-area .footer-bottom p {
+    color: #ffffff
+}
+
+.footer-area .footer-bottom a,.footer-area .footer-bottom span {
+    color: #71cd14
+}
+
+.footer-area .footer-bottom span {
+    font-weight: 700
+}
+
+.footer-area .footer-bottom .footer-social {
+    text-align: center
+}
+
+@media (max-width: 991px) {
+    .footer-area .footer-bottom .footer-social {
+        text-align:left;
+        margin-top: 30px
+    }
+}
+
+.footer-area .footer-bottom .footer-social a {
+    background: rgba(255,255,255,0.15);
+    margin-left: 5px;
+    width: 40px;
+    color: #ffffff;
+    display: inline-grid;
+    text-align: center;
+    height: 40px;
+    align-content: center;
+    transition: all 300ms linear 0s
+}
+
+.footer-area .footer-bottom .footer-social a:hover {
+    background: #71cd14
+}
+
+  
+    </style>
+    </head>
+<body>
+    <header class="header_area">
+        <div class="top_menu">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="float-left">
+                  <p>Phone: +01112223388</p>
+                  <p>email: shopEasy@.com</p>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="float-right">
+                  <ul class="right_side">
+                    <li>
+                      <a href="cart.html">
+                        gift card
+                      </a>
+                    </li>
+                    <li>
+                      <a href="tracking.html">
+                        track order
+                      </a>
+                    </li>
+                    <li>
+                      <a href="contact.html">
+                        Contact Us
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main_menu">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+             
+              <a class="navbar-brand logo_h" href="home.html">
+                <img src="img/logo.png" alt="" />
+              </a>
+             
+                <span class="icon-bar"><i class="fa-thin fa-magnifying-glass"></i></span>
+                <span class="icon-bar"><i class="fa-thin fa-cart-shopping"></i></span>
+                <span class="icon-bar"><i class="fa-thin fa-user"></i></span>
+                <span class="icon-bar"><i class="fa-thin fa-heart"></i></span>
+              
+              
+              
+                <div class="row w-100 mr-0">
+                  <div class="col-lg-7 pr-0">
+                    <ul class="nav navbar-nav center_nav pull-right">
+                      <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                      </li>
+                      <li class="nav-item active submenu dropdown">
+                        <a
+                          href="#"
+                          class="nav-link dropdown-toggle"
+                          data-toggle="dropdown"
+                          role="button"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                          >Shop</a
+                        >
+                        <ul class="dropdown-menu">
+                          <li class="nav-item">
+                            <a class="nav-link" href="category.html"
+                              >Shop Category</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="single-product.html"
+                              >Product Details</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="checkout.html"
+                              >Product Checkout</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="cart.html">Shopping Cart</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item submenu dropdown">
+                        <a
+                          href="#"
+                          class="nav-link dropdown-toggle"
+                          data-toggle="dropdown"
+                          role="button"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                          >Blog</a
+                        >
+                        <ul class="dropdown-menu">
+                          <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="single-blog.html"
+                              >Blog Details</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item submenu dropdown">
+                        <a
+                          href="#"
+                          class="nav-link dropdown-toggle"
+                          data-toggle="dropdown"
+                          role="button"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                          >Pages</a
+                        >
+                        <ul class="dropdown-menu">
+                          <li class="nav-item">
+                            <a class="nav-link" href="tracking.html">Tracking</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="elements.html">Elements</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="col-lg-5 pr-0">
+                    <ul class="nav navbar-nav navbar-right right_nav pull-right">
+                      <li class="nav-item">
+                        <a href="#" class="icons">
+                            <i class="fa-thin fa-magnifying-glass"></i>
+                        </a>
+                      </li>
+  
+                      <li class="nav-item">
+                        <a href="#" class="icons">
+                          <i class="ti-shopping-cart"></i>
+                        </a>
+                      </li>
+  
+                      <li class="nav-item">
+                        <a href="#" class="icons">
+                          <i class="ti-user" aria-hidden="true"></i>
+                        </a>
+                      </li>
+  
+                      <li class="nav-item">
+                        <a href="#" class="icons">
+                          <i class="ti-heart" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    <br><br>
+    <div class="image-container" id="home.html">
+        <img src="img/banner.jpg" alt="Background Image">
+        <div class="text-overlay">
+            <h1>Show Your Personal Style</h1>
+            <p>Fowl saw dry which a above together place.</p>
+            <a href="#" class="btn">View Collection</a>
+        </div>
+    </div>
+<br><br><br>
+    <section class="features">
+        <div class="feature">
+            <i class="fa-solid fa-sack-dollar"></i>
+            <h3>Money Back Guarantee</h3>
+            <p>Shall open divide a one</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-truck"></i>
+            <h3>Free Delivery</h3>
+            <p>Shall open divide a one</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-headphones"></i>
+            <h3>Always Support</h3>
+            <p>Shall open divide a one</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-lock"></i>
+            <h3>Secure Payment</h3>
+            <p>Shall open divide a one</p>
+        </div>
+    </section>
+    
+    <div class="product">
+        FEATURED PRODUCT<br>
+        <div class="line"></div><br>
+        <p>Bring called seed first of third give itself now ment</p>
+    </div>
+    
+
+
+    <section class="new-products">
+        <div class="line"></div><br>
+        <div class="product-grid">
+            <div class="product2">
+                <img src="img/sneaker.jpg" alt="Latest Men's Sneaker">
+                <div class="product-info">
+                  <h2>Latest Men's Sneaker</h2>
+                  <p class="price">$25.00 <span>$35.00</span></p>
+        </div>
+                <div class="product-actions">
+                        <button>View</button>
+                        <button>Wishlist</button>
+                        <button>Cart</button>
+                </div>
+            </div>
+    <div class="product2">
+        <img src="img/purse.jpg" alt="Red Women Purses">
+        <div class="product-info">
+            <h2>Red Women Purses</h2>
+            <p class="price">$25.00 <span>$35.00</span></p>
+            <div class="product-actions">
+                <button>View</button>
+                <button>Wishlist</button>
+                <button>Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="product2">
+        <img src="img/watch2.jpg" alt="Men Stylist Smart Watch">
+        <div class="product-info">
+            <h2>Stylist Smart Watch</h2>
+            <p class="price">$25.00 <span>$35.00</span></p>
+            <div class="product-actions">
+                <button>View</button>
+                <button>Wishlist</button>
+                <button>Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="banner">
+  <div>
+    <h1>All Men's Collection</h1>
+    <p>50% OFF</p>
+    <a class="btn btn-success btn-lg" href="cart.html" role="button">Discover Now</a>
+    <p>Limited Time Offer</p>
+  </div>
+</div>
+
+<div class="productss">
+  NEW PRODUCT<br>
+  <div class="line"></div><br>
+  <p>Bring called seed first of third give itself now ment</p>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 product-card1">
+      <img src="https://themewagon.github.io/eiser/img/product/new-product/new-product1.png"  alt="Men's Summer T-Shirt">
+      <h4>COLLECTION OF 2019</h4>
+      <h3>MEN'S SUMMER T-SHIRT</h3>
+      <div class="price">$120.70</div>
+      <a class="btn btn-success btn-lg" href="cart.html" role="button">ADD TO CART</a>
+    </div>
+    <div class="col-md-4 product-card">
+      <img src="	https://themewagon.github.io/eiser/img/product/new-product/n1.jpg" alt="Nike Latest Sneaker">
+      <h4>NIKE LATEST SNEAKER</h4>
+      <div class="price">$25.00<span class="old-price">$35.00</span></div>
+    </div>
+    <div class="col-md-4 product-card">
+      <img src="https://themewagon.github.io/eiser/img/product/new-product/n3.jpg" alt="Men's Denim Jeans">
+      <h4>MEN'S DENIM JEANS</h4>
+      <div class="price">$25.00<span class="old-price">$35.00</span></div>
+    </div>
+    <div class="col-md-4 product-card2">
+      <img src="https://themewagon.github.io/eiser/img/product/new-product/n2.jpg" alt="Quartz Hand Watch">
+      <h4>QUARTZ HAND WATCH</h4>
+      <div class="price">$25.00<span class="old-price">$35.00</span></div>
+    </div>
+    <div class="col-md-4 product-card2">
+      <img src="https://themewagon.github.io/eiser/img/product/new-product/n4.jpg" alt="Adidas Sport Shoe">
+      <h4>ADIDAS SPORT SHOE</h4>
+      <div class="price">$25.00<span class="old-price">$35.00</span></div>
+    </div>
+  </div>
+</div>
+   
+<div class="productss">
+  INSPIRED PRODUCT<br>
+  <div class="line"></div><br>
+  <p>Bring called seed first of third give itself now ment</p>
+</div><br><br><br><br><br><br><br>
+
+<div class="main-container">
+  <div class="items-grid">
+      <div class="item">
+          <img src="	https://themewagon.github.io/eiser/img/product/inspired-product/i1.jpg" alt="Bag">
+          <h3>Latest Women's Purse</h3>
+          <p>$25.00 <span>$35.00</span></p>
+      </div>
+      <div class="item">
+          <img src="https://themewagon.github.io/eiser/img/product/inspired-product/i2.jpg" alt="Jeans">
+          <h3>Latest Men's Jins</h3>
+          <p>$25.00 <span>$35.00</span></p>
+      </div>
+      <div class="item">
+          <img src="https://themewagon.github.io/eiser/img/product/inspired-product/i3.jpg" alt="Watch">
+          <h3>Latest Smart watch</h3>
+          <p>$25.00 <span>$35.00</span></p>
+      </div>
+      <div class="item">
+          <img src="https://themewagon.github.io/eiser/img/product/inspired-product/i4.jpg" alt="Shoe">
+          <h3>Latest Men's Shoe</h3>
+          <p>$25.00 <span>$35.00</span></p>
+      </div>
+      <div class="item">
+          <img src="https://themewagon.github.io/eiser/img/product/inspired-product/i5.jpg" alt="Watch">
+          <h3>Latest watch</h3>
+          <p>$25.00 <span>$35.00</span></p>
+      </div>
+      <div class="item">
+          <img src="https://themewagon.github.io/eiser/img/product/inspired-product/i6.jpg" alt="Shoes">
+          <h3>Latest Men's Sneaker</h3>
+          <p>$25.00 <span>$35.00</span></p>
+      </div>
+      <div class="item">
+          <img src="https://themewagon.github.io/eiser/img/product/inspired-product/i7.jpg" alt="Bag">
+          <h3>Latest Women's Bag</h3>
+          <p>$25.00 <span>$35.00</span></p>
+      </div>
+      <div class="item">
+          <img src="https://themewagon.github.io/eiser/img/product/inspired-product/i8.jpg" alt="Shoes">
+          <h3>Latest Shoe</h3>
+          <p>$25.00 <span>$35.00</span></p>
+      </div>
+  </div>
+</div>
+
+<div class="productss">
+   LATEST BLOG<br>
+  <div class="line"></div><br>
+  <p>Bring called seed first of third give itself now ment</p>
+</div>
+
+
+<section class="new-products">
+  <div class="line"></div><br>
+  <div class="product-grid">
+      <div class="product2">
+          <img src="https://themewagon.github.io/eiser/img/b1.jpg">
+          <div class="product-info2">
+            <h2>Ford clever bed stops your sleeping partner hogging the whole</h2><br>
+            <p class="price">Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided light Forth.<br><br>
+            <button>Learn Info-</button></p>
+  </div>
+      </div>
+<div class="product2">
+  <img src="https://themewagon.github.io/eiser/img/b2.jpg">
+  <div class="product-info2">
+    <h2>Ford clever bed stops your sleeping partner hogging the whole</h2><br>
+    <p class="price">Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided light Forth.</p>
+    <button>Learn Info-</button></p>
+</div>
+</div>
+<div class="product2">
+  <img src="https://themewagon.github.io/eiser/img/b3.jpg">
+  <div class="product-info2">
+    <h2>Ford clever bed stops your sleeping partner hogging the whole</h2><br>
+    <p class="price">Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided light Forth.</p>
+    <button>Learn Info-</button></p>
+</div>
+</div>
+</section>
+<footer class="footer-area section_gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-6 single-footer-widget">
+        <h4>Top Products</h4>
+        <ul>
+          <li><a href="#">Managed Website</a></li>
+          <li><a href="#">Manage Reputation</a></li>
+          <li><a href="#">Power Tools</a></li>
+          <li><a href="#">Marketing Service</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 single-footer-widget">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Brand Assets</a></li>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 single-footer-widget">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Brand Assets</a></li>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 single-footer-widget">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Experts</a></li>
+          <li><a href="#">Agencies</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6 single-footer-widget">
+        <h4>Newsletter</h4>
+        <p>You can trust us. we only send promo offers,</p>
+        <div class="form-wrap" id="mc_embed_signup">
+          <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+            method="get" class="form-inline">
+            <input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Your Email Address '" required="" type="email">
+            <button class="click-btn btn btn-default">Subscribe</button>
+            <div style="position: absolute; left: -5000px;">
+              <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+            </div>
+
+            <div class="info"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom row align-items-center">
+      <p class="footer-text m-0 col-lg-8 col-md-12">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+</p>
+      <div class="col-lg-4 col-md-12 footer-social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-solid fa-globe"></i></a>
+        <a href="#"><i class="fa-brands fa-behance"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+
+   
